@@ -29,26 +29,20 @@ public class Commands extends Variable {
                 break;
                 
             case "<":
-                if (a.getClass().getName().equals("java.lang.integer") && b.getClass().getName().equals("java.lang.integer") ||
-                    a.getClass().getName().equals("java.lang.float") && b.getClass().getName().equals("java.lang.float"))
-                    if (Integer.parseInt(a) < Integer.parseInt(b)) jmp(Pn_Main.line + 1);
-                    else endif();
-                else Msg.err("Cannot compare variables with different data types.", 1);
+                if (Integer.parseInt(a) < Integer.parseInt(b)) jmp(Pn_Main.line + 1);
+                else endif();
                 break;
                 
             case ">":
-                if (a.getClass().getName().equals("java.lang.integer") && b.getClass().getName().equals("java.lang.integer") ||
-                    a.getClass().getName().equals("java.lang.float") && b.getClass().getName().equals("java.lang.float"))
-                    if (Integer.parseInt(a) > Integer.parseInt(b)) jmp(Pn_Main.line + 1);
-                    else endif();
-                else Msg.err("Cannot compare variables with different data types.", 1);
+                if (Integer.parseInt(a) > Integer.parseInt(b)) jmp(Pn_Main.line + 1);
+                else endif();
                 break;
         }
     }
     
     static void endif() {
         if (Cmd.isCmd) {
-            while (Pn_Main.file.get(Pn_Main.line).equals("endif")) {
+            while (!Pn_Main.file.get(Pn_Main.line).equals("endif")) {
                 Pn_Main.line++;
             }
         }
