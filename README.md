@@ -3,7 +3,7 @@
 This is an interpreter I made for my scritpting language "PN" (PlayName).
 Feel free to make improvements to it.
 
-###### Arguments
+### Arguments
 
   pn [-d (DEBUG)] [-v (VERSION)] [PATH TO FILE]
   
@@ -11,7 +11,7 @@ Feel free to make improvements to it.
   -v shows the version of the program.
   
 
-###### Commands
+### Commands
 
   add [VARIABLE], [VALUE]
   sub [VARIABLE], [VALUE]
@@ -43,18 +43,18 @@ Feel free to make improvements to it.
   pop [VARIABLE]
 
 
-###### Variables
+### Variables
 
   var [NAME]: [TYPE] = "[VALUE]"
   
   Datatypes: int, float, bool, string //EVERYTHING IS JUST A STRING
   
 
-###### Functions
+### Functions
 
   void [NAME]
 
 
-###### Comments
+### Comments
 
   "// " is a comment (space after "//" is required)
